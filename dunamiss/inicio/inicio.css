@@ -30,18 +30,27 @@ header p {
     color: rgb(255, 230, 175);
 }
 
+
+.face_logo {
+    width: 100%;
+    height: 46rem;
+    object-fit: contain;
+
+}
+
 .titulo {
     text-align: center;
     font-size: 4rem;
     font-family: "Google Sans", sans-serif;
 }
 
-.quem_somos {
+.quem_somos, .face {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
+    gap: 2rem;
 }
 
 .texto {
@@ -55,5 +64,9 @@ header p {
 .texto p {
     margin: 3rem;
     font-size: 1.6rem; 
+}
+
+.banner {
+    max-width: 100%
 }
 
