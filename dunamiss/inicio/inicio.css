@@ -31,11 +31,11 @@ header p {
 }
 
 
-.face_logo {
+.face_logo, .foto_identidades {
     width: 100%;
     height: 46rem;
     object-fit: contain;
-
+    transition: transform 0.1s ease-in-out;
 }
 
 .titulo {
@@ -45,7 +45,7 @@ header p {
 }
 
 
-.quem_somos, .face {
+.quem_somos, .face, .identidades {
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -58,7 +58,7 @@ header p {
     transition: transform 0.1s ease-in-out;
 }
 
-.logo:hover {
+.logo:hover, .padrinho img:hover, .face_logo:hover, .foto_identidades:hover {
     transform: scale(1.03)
 }
 
@@ -74,6 +74,10 @@ header p {
 .texto p{
     margin: 3rem;
     font-size: 1.6rem; 
+}
+
+.face .texto {
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .fundo_padrinho {
@@ -111,10 +115,6 @@ header p {
     transition: transform 0.1s ease-in-out;
 }
 
-.padrinho img:hover {
-    transform: scale(1.03);
-}
-
 .lado_direito_padrinho {
     padding: 1rem;
     padding-left: 1rem;
@@ -141,9 +141,11 @@ header p {
     width: 75%;
     margin: 0 auto;
     margin-top: 3.2rem;
+    margin-bottom: 3rem;
     border-radius: 15px;
     text-align: center;
     font-family: "Google Sans", sans-serif;
+
     
 }
 
@@ -154,6 +156,13 @@ header p {
     font-size: 1.6rem;
 }
 
+.identidades {
+    gap: 5rem;
+}
+
+.identidades img {
+    margin-left: 1rem;
+}
 
 footer {
     background-color: rgba(134, 1, 1, 0.95); 
