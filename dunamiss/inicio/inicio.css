@@ -44,6 +44,7 @@ header p {
     font-family: "Google Sans", sans-serif;
 }
 
+
 .quem_somos, .face {
     display: flex;
     justify-content: space-between;
@@ -65,6 +66,13 @@ header p {
 .texto p{
     margin: 3rem;
     font-size: 1.6rem; 
+}
+
+.fundo_padrinho {
+    background-color: red;
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+    background: linear-gradient(to bottom, rgb(248, 213, 205) 80%,rgb(255, 230, 175) 100% )
 }
 
 .padrinho {
@@ -108,7 +116,7 @@ header p {
 .lado_esquerdo_padrinho {
     padding: 2rem;
     margin-left: 2rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .banner {
