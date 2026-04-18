@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(255, 230, 175);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header  {
+    background-color: rgba(182, 3, 3, 0.849);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+header a{
+    padding: 1rem;  
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(255, 230, 175);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: rgb(255, 230, 175);
+}
+
+.titulo {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Google Sans", sans-serif;
+}
+
+.quem_somos {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.texto {
+    justify-content: center;
+    margin-top: 4rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    margin-bottom: 5rem;;
+}
+
+.texto p {
+    margin: 3rem;
+    font-size: 1.6rem; 
+}
+
