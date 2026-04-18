@@ -11,7 +11,7 @@ html {
 }
 
 header  {
-    background-color: rgba(182, 3, 3, 0.849);
+    background-color: rgba(134, 1, 1, 0.95);
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -54,6 +54,14 @@ header p {
     gap: 2rem;
 }
 
+.logo {
+    transition: transform 0.1s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.03)
+}
+
 .texto {
     justify-content: center;
     margin-top: 4rem;
@@ -72,7 +80,7 @@ header p {
     background-color: red;
     padding-top: 3rem;
     padding-bottom: 0.5rem;
-    background: linear-gradient(to bottom, rgb(248, 213, 205) 80%,rgb(255, 230, 175) 100% )
+    background: linear-gradient(to bottom, rgb(248, 213, 205) 90%,rgb(255, 230, 175) 100% )
 }
 
 .padrinho {
@@ -100,7 +108,11 @@ header p {
     margin-left: 4.4rem;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    transition: transform 0.1s ease-in-out;
+}
 
+.padrinho img:hover {
+    transform: scale(1.03);
 }
 
 .lado_direito_padrinho {
@@ -123,5 +135,34 @@ header p {
     max-width: 100%
 }
 
+.aba_face {
+    background-color: rgb(248, 213, 205);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 3.2rem;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Google Sans", sans-serif;
+    
+}
+
+.fotos_face {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
 
 
+footer {
+    background-color: rgba(134, 1, 1, 0.95); 
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 230, 175);
+}
+
+footer a {
+    text-decoration: none;
+}
