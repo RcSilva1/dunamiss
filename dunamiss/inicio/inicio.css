@@ -1,13 +1,19 @@
 * {
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
     background-color: rgb(255, 230, 175);
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+p, h1, h2, h3, h4, a {
+    font-family: "Google Sans", sans-serif;
 }
 
 header  {
@@ -98,19 +104,21 @@ header p {
 }
 
 .padrinho h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 1rem;
-    white-space: nowrap;
+    margin-bottom: 1rem;
+    color: rgb(255, 230, 175);
 }
 
 .padrinho p {
     font-size: 1.6rem;
+    color:rgb(255, 230, 175);   
 }
 
 .padrinho img {
-    max-width: 100%;
+    max-width: 80%;
     margin-top: 2rem;
-    margin-left: 2.3rem;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,5);
     transition: transform 0.1s ease-in-out;
@@ -121,7 +129,7 @@ header p {
     padding-left: 1rem;
     padding-right: 3rem;
     margin-right: 3rem;
-    width: 30%;
+    width: 60%;
     text-align: center;
 
 }
@@ -143,24 +151,26 @@ header p {
     text-align: center;
     font-family: "Google Sans", sans-serif;
     padding-left: 0;
-    padding-right: 2rem;
+
 }
 
 .aba_face {
     margin-bottom: 6rem;
 }
 
-details[open], .grid_face, .grid_identides {
+details[open], .grid, details[open] .grid_identides {
     max-height: 10000px;
     transition: max-height 1s ease-in-out
 }
 
 details {
     max-height: 6.2rem;;
+    overflow: hidden;
 }
 
-details[open] .grid_face, details[open] .grid_identidades {
-    animation: abrir_aba 0.3s ease-in-out;
+details[open] .grid, details[open] .grid_identidades {
+    animation: abrir_aba 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 @keyframes abrir_aba {
@@ -195,12 +205,11 @@ details[open] .grid_face, details[open] .grid_identidades {
     margin: 0.4rem;
 }
 
-.grid_face {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding: 2rem;
 
 }
 
@@ -218,9 +227,7 @@ details[open] .grid_face, details[open] .grid_identidades {
     height: auto;
     display: block;
     object-fit: cover;
-    margin: 1rem;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
 }
 
 .item img {
@@ -238,16 +245,73 @@ details[open] .grid_face, details[open] .grid_identidades {
     background-color: rgb(248, 213, 205);
     background: linear-gradient(to top, rgba(162, 0, 0, 0.95) 90%,rgb(255, 230, 175) 100%);
     display: flex;
-    height: 1000px;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
 }
 
-.melhores_momentos h1{
+.melhores_momentos .titulo{
     margin: 0 auto;
     margin-top: 7rem;
+    margin-bottom: 2rem;
 }
 
+.melhores_momentos .grid {
+    width: 90%;
+    margin: 0 auto;
+}
 
+/*------------------------------------------------
+                      ANIMAÇÔES
+  ------------------------------------------------*/
+
+.esquerda, .direita, .cima, .baixo {
+    transition: all 0.5s ease-in-out;
+}
+
+.esquerda.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.direita.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cima.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.baixo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.esquerda {
+    opacity: 0;
+    transform: translateX(-70px);
+}
+
+.direita {
+    opacity: 0;
+    transform: translateX(70px);
+}
+
+.cima {
+    opacity: 0;
+    transform: translateY(-70px);
+}
+
+.baixo {
+    opacity: 0;
+    transform: translateY(70px);
+}
+
+/*------------------------------------------------
+                      FOOTER
+  ------------------------------------------------*/
 
 footer {
     background-color: rgba(134, 1, 1, 0.95); 
@@ -259,4 +323,124 @@ footer {
 
 footer a {
     text-decoration: none;
+    color: rgb(255, 230, 175);
+}
+
+/*------------------------------------------------
+                Estilização mobile
+  ------------------------------------------------*/
+
+@media (max-width: 768px) {
+    /* 1. Ajustes de Reset e Centralização Geral */
+    header, .quem_somos, .face, .identidades, .padrinho, .melhores_momentos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        gap: 1.5rem;
+    }
+
+    /* 2. Header mais limpo */
+    header {
+        padding: 1.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    header .link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    header a, header p {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    /* 3. Títulos e Textos */
+    .titulo {
+        font-size: 2.5rem; /* Aumentado um pouco para melhor legibilidade */
+        margin: 1.5rem auto;
+        width: 90%;
+        line-height: 1.2;
+    }
+
+    .texto {
+        width: 90% !important; /* Ocupa melhor a tela do celular */
+        margin: 1rem auto 2rem auto !important;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3); 
+    }
+
+    .texto p {
+        margin: 1.5rem;
+        font-size: 1.1rem;
+        text-align: left; 
+    }
+
+    /* 4. Correção de Colunas e Imagens Hero */
+    .lado_esquerdo_padrinho, 
+    .lado_direito_padrinho, 
+    .imagem {
+        width: 90% !important; /* Substitui os 60% para não espremer o conteúdo */
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Remove a altura de 46rem do desktop para não achatar ou criar espaço vazio */
+    .face_logo, 
+    .foto_identidades {
+        width: 90% !important;
+        height: auto !important; 
+        max-height: 400px;
+        margin: 0 auto;
+    }
+
+    /* A regra 'img { max-width: 50%; }' foi REMOVIDA para não quebrar o grid */
+
+    /* 5. Seção Padrinho */
+    .padrinho {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .padrinho img {
+        max-width: 90%; /* Imagem do padrinho ocupa bem o espaço */
+        margin: 1rem auto;
+    }
+
+    .lado_esquerdo_padrinho {
+        margin-top: 0 !important;
+    }
+
+    /* 6. Accordions (Details) */
+    .aba_face, .aba_identidades {
+        width: 92%;
+        margin: 2rem auto;
+    }
+
+    .fotos_face, .fotos_identidades {
+        font-size: 1.3rem;
+    }
+
+    /* 7. Grid de Fotos */
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        padding: 0.8rem;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 8. Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
 }
