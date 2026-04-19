@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    background-color: rgb(255, 230, 175);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header  {
+    background-color: rgba(134, 1, 1, 0.95);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+header a{
+    padding: 1rem;  
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(255, 230, 175);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: rgb(255, 230, 175);
+}
+
+
+.face_logo, .foto_identidades {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.1s ease-in-out;
+}
+
+.imagem {
+    width: 40%;
+}
+
+
+.titulo {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Google Sans", sans-serif;
+    margin-top: 2rem;
+}
+
+
+.quem_somos, .face, .identidades {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.logo {
+    transition: transform 0.1s ease-in-out;
+}
+
+.logo:hover, .padrinho img:hover, .face_logo:hover, .foto_identidades:hover{
+    transform: scale(1.04)
+}
+
+.texto {
+    justify-content: center;
+    margin-top: 4rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    margin-bottom: 5rem;
+    background-color: rgba(159, 2, 2, 0.95);
+
+}
+
+.texto p{
+    margin: 3rem;
+    font-size: 1.6rem; 
+    display: block;
+    background-color: green;
+}
+
+.face .texto {
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.fundo_padrinho {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(to bottom, rgba(162, 0, 0, 0.95)  79%,rgb(255, 230, 175) 100% )
+}
+
+.padrinho {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+}
+
+.padrinho h3 {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 230, 175);
+}
+
+.padrinho p {
+    font-size: 1.6rem;
+    color:rgb(255, 230, 175);   
+}
+
+.padrinho img {
+    max-width: 80%;
+    margin-top: 2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    transition: transform 0.1s ease-in-out;
+}
+
+.lado_direito_padrinho {
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    margin-right: 3rem;
+    width: 60%;
+    text-align: center;
+
+}
+
+.lado_esquerdo_padrinho {
+    padding: 2rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.aba_face, .aba_identidades {
+    background-color: rgba(162, 0, 0, 0.95);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 3.2rem;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Google Sans", sans-serif;
+    padding-left: 0;
+
+}
+
+.aba_face {
+    margin-bottom: 6rem;
+}
+
+.nosso_livro {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.nosso_livro .imagem {
+    width: 40%;
+}
+
+.nosso_livro p {
+    color: black;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.nosso_livro .titulo {
+    margin-top: 2rem;
+    color: rgba(162, 0, 0, 0.95);
+}
+
+.nosso_livro .nosso_livro_texto {
+    margin-top: 2rem;
+}
+
+details[open], .grid, details[open] .grid_identides {
+    max-height: 10000px;
+    transition: max-height 1s ease-in-out
+}
+
+details {
+    max-height: 6.2rem;;
+    overflow: hidden;
+}
+
+details[open] .grid, details[open] .grid_identidades {
+    animation: abrir_aba 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+@keyframes abrir_aba {
+    0% {opacity: 0; transform: translateY(-70px)}
+    100% {opacity: 100%; transform: translateY(0)}
+}
+
+
+.fotos_face, .fotos_identidades {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+.grid_identidades {
+    padding-bottom: 2rem;
+}
+
+.video {
+    border-radius: 5px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 0px 20px rgba(0,0,0,1);
+    margin: 0.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 2rem;
+
+}
+
+.item {
+    grid-row: span var(--rows, 1);
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+
+}
+
+.item img,
+.item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    border: solid 2px black
+}
+
+.item img {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.item:hover, .grid_identidades video:hover {
+    transform: scale(1.03);
+    transition: transform 0.1s ease-in-out;
+    z-index: 1;
+}
+
+.melhores_momentos {
+    background-color: rgb(248, 213, 205);
+    background: linear-gradient(to top, rgba(162, 0, 0, 0.95) 90%,rgb(255, 230, 175) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.melhores_momentos .titulo{
+    margin: 0 auto;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+
+.melhores_momentos .grid {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*------------------------------------------------
+                      ANIMAÇÔES
+  ------------------------------------------------*/
+
+.esquerda, .direita, .cima, .baixo {
+    transition: all 0.5s ease-in-out;
+}
+
+.esquerda.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.direita.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cima.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.baixo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.esquerda {
+    opacity: 0;
+    transform: translateX(-70px);
+}
+
+.direita {
+    opacity: 0;
+    transform: translateX(70px);
+}
+
+.cima {
+    opacity: 0;
+    transform: translateY(-70px);
+}
+
+.baixo {
+    opacity: 0;
+    transform: translateY(70px);
+}
+
+/*------------------------------------------------
+                      FOOTER
+  ------------------------------------------------*/
+
+footer {
+    background-color: rgba(134, 1, 1, 0.95); 
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 230, 175);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(255, 230, 175);
+}
+
+/*------------------------------------------------
+                Estilização mobile
+  ------------------------------------------------*/
+
+@media (max-width: 768px) {
+    /* 1. Ajustes de Reset e Centralização Geral */
+
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    header, .quem_somos, .face, .identidades, .padrinho, .melhores_momentos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        gap: 1.5rem;
+    }
+
+    /* 2. Header mais limpo */
+    header {
+        padding: 1.5rem 1rem;
+        margin-bottom: 2rem;
+
+    }
+
+    header .link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    header a, header p {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .logo {
+        max-width: 250px; /* Ou o tamanho que você preferir no celular */
+        height: auto;
+        margin: 0 auto !important; /* Centraliza horizontalmente */
+
+    }
+
+    /* 3. Títulos e Textos */
+    .titulo {
+        font-size: 2.5rem; /* Aumentado um pouco para melhor legibilidade */
+        margin: 1.5rem auto;
+        width: 90%;
+        line-height: 1.2;
+    }
+
+    .texto {
+        width: 90% !important; /* Ocupa melhor a tela do celular */
+        margin: 1rem auto 2rem auto !important;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3); 
+    }
+
+    .texto p {
+        margin: 1.5rem;
+        font-size: 1.1rem;
+        text-align: left; 
+    }
+
+    /* 4. Correção de Colunas e Imagens Hero */
+    .lado_esquerdo_padrinho, 
+    .lado_direito_padrinho, 
+    .imagem {
+        width: 90% !important; /* Substitui os 60% para não espremer o conteúdo */
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Remove a altura de 46rem do desktop para não achatar ou criar espaço vazio */
+    .face_logo, 
+    .foto_identidades {
+        width: 90% !important;
+        height: auto !important; 
+        max-height: 400px;
+        margin: 0 auto;
+    }
+
+    /* A regra 'img { max-width: 50%; }' foi REMOVIDA para não quebrar o grid */
+
+    /* 5. Seção Padrinho */
+    .padrinho {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .padrinho img {
+        max-width: 90%; /* Imagem do padrinho ocupa bem o espaço */
+        margin: 1rem auto;
+    }
+
+    .lado_esquerdo_padrinho {
+        margin-top: 0 !important;
+    }
+
+    /* 6. Accordions (Details) */
+    .aba_face, .aba_identidades {
+        width: 92%;
+        margin: 2rem auto;
+    }
+
+    .fotos_face, .fotos_identidades {
+        font-size: 1.3rem;
+    }
+
+    /* 7. Grid de Fotos */
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        padding: 0.8rem;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .esquerda, .direita {
+        /* Em vez de 70px (que sobra da tela), usamos um valor menor ou apenas o eixo Y */
+        transform: translateY(70px); 
+        opacity: 0;
+        transition: all 0.6s ease-out;
+    }
+
+    /* Quando o JS ativar a classe .show, ela volta ao normal */
+    .esquerda.show, .direita.show {
+        transform: translate(0);
+        opacity: 1 !important;
+    }
+
+    /* 8. Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+}
