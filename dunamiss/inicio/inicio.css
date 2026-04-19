@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
 }
 
 body {
@@ -12,10 +13,6 @@ body {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-}
-
-p, h1, h2, h3, h4, a {
-    font-family: "Google Sans", sans-serif;
 }
 
 header  {
@@ -84,11 +81,14 @@ header p {
     border-radius: 15px;
     margin-bottom: 5rem;
     background-color: rgba(159, 2, 2, 0.95);
+
 }
 
 .texto p{
     margin: 3rem;
     font-size: 1.6rem; 
+    display: block;
+    background-color: green;
 }
 
 .face .texto {
@@ -163,6 +163,35 @@ header p {
 
 .aba_face {
     margin-bottom: 6rem;
+}
+
+.nosso_livro {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.nosso_livro .imagem {
+    width: 40%;
+}
+
+.nosso_livro p {
+    color: black;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.nosso_livro .titulo {
+    margin-top: 2rem;
+    color: rgba(162, 0, 0, 0.95);
+}
+
+.nosso_livro .nosso_livro_texto {
+    margin-top: 2rem;
 }
 
 details[open], .grid, details[open] .grid_identides {
