@@ -3,7 +3,8 @@
 Este repositório contém o código-fonte e os arquivos do site da turma Dunamiss. Ao acessar este projeto, você concorda com as seguintes condições:
 
 - Inspiração: Sinta-se à vontade para se inspirar na estrutura, paleta de cores e lógica do projeto para criar o seu próprio trabalho original.
-- Cópia Direta (Plágio): Não é autorizada a cópia literal, redistribuição ou "fork" do código para uso como se fosse um produto final próprio. O uso de arquivos de imagem, logotipos e textos específicos da turma Dunamiss é estritamente proibido.
+- Cópia Direta (Plágio): Não é autorizada a cópia literal, redistribuição ou "fork" do código para uso como se fosse um produto final próprio.
+- O uso de arquivos de imagem, logotipos e textos específicos da turma Dunamiss é estritamente proibido.
 - Fins Educativos: O código está disponível aqui apenas para fins de portfólio e consulta acadêmica.
 
 English Version
