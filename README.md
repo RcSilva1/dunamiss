@@ -11,5 +11,5 @@ English Version
 This repository contains the source code for the Dunamiss class website. By accessing this project, you agree to the following:
 
 - Inspiration: You are welcome to use the project's structure, color palette, and logic as inspiration for your own original work.
-= Direct Copying: Literal copying, redistribution, or "forking" of the code to be used as your own final product is not permitted. The use of images, logos, and specific text related to the Dunamiss class is strictly prohibited.
+- Direct Copying: Literal copying, redistribution, or "forking" of the code to be used as your own final product is not permitted. The use of images, logos, and specific text related to the Dunamiss class is strictly prohibited.
 - Educational Purposes: This code is available for portfolio and academic reference only.
