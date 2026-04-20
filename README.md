@@ -8,6 +8,7 @@ Este repositório contém o código-fonte e os arquivos do site da turma Dunamis
 - Fins Educativos: O código está disponível aqui apenas para fins de portfólio e consulta acadêmica.
 
 English Version
+
 This repository contains the source code for the Dunamiss class website. By accessing this project, you agree to the following:
 
 - Inspiration: You are welcome to use the project's structure, color palette, and logic as inspiration for your own original work.
