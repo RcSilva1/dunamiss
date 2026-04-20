@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Google Sans", sans-serif;
 }
 
 body {
@@ -48,7 +47,7 @@ summary {
     height: 100%;
     max-height: 100%;
     object-fit: contain;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;     
 }
 
 .imagem {
@@ -84,22 +83,22 @@ summary {
 .texto {
     justify-content: center;
     margin-top: 4rem;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     border-radius: 15px;
     margin-bottom: 5rem;
     background-color: rgba(159, 2, 2, 0.95);
+    padding: 1rem;
 
 }
 
 .texto p{
-    margin: 3rem;
+    margin: 1.3rem;
     font-size: 1.6rem; 
-    display: block;
-    background-color: green;
+
 }
 
 .face .texto {
-    box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.5);
 }
 
 .fundo_padrinho {
@@ -123,6 +122,7 @@ summary {
     margin-bottom: 1rem;
     color: rgb(255, 230, 175);
     white-space: nowrap;
+    font-family: "Google Sans", sans-serif;
 }
 
 .padrinho p {
@@ -215,7 +215,6 @@ summary {
         url("../imagens/fundo_mexico.webp");
     background-size: cover;
     background-position: center;
-
 }
 
 
@@ -244,6 +243,7 @@ summary {
     background: linear-gradient(rgba(162, 0, 0, 0.806) 70%, rgb(162, 0, 0) 100%);
     border-radius: 15px 15px 0 0;
     border: solid 5px rgba(162, 0, 0, 0.95);
+    box-shadow: 0px 0px 10px rgb(162, 0, 0);
     border-bottom: none;
 }
 
@@ -340,6 +340,7 @@ details[open] .grid, details[open] .grid_identidades {
     margin: 0 auto;
     margin-top: 7rem;
     margin-bottom: 2rem;
+    color: rgb(255, 230, 175)
 }
 
 .melhores_momentos .grid {
@@ -416,7 +417,7 @@ footer a {
                 Estilização mobile
   ------------------------------------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
 
     * {
