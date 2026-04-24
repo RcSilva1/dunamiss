@@ -283,7 +283,7 @@ details[open] .grid, details[open] .grid_identidades {
 
 
 .fotos_face, .fotos_identidades {
-    list-style: none;
+
     cursor: pointer;
     padding: 1rem;
     font-size: 1.6rem;
